@@ -10,13 +10,13 @@ import { ModalidadesFiltro } from './modalidades-filtro';
   providedIn: 'root'
 })
 
-export class ModalidadesService /*extends BaseResourceService<Modalidade>*/{
+export class ModalidadesService extends BaseResourceService<Modalidade>{
 
-  /*constructor(protected injector: Injector) {
+  constructor(protected injector: Injector) {
     super(environment.apiUrl + 'tipoModalidade', injector, Modalidade.fromJson);
-  }*/
+  }
 
-  /*pesquisar(filtro: ModalidadesFiltro): Promise<any> {
+  pesquisar(filtro: ModalidadesFiltro): Promise<any> {
     let params = filtro.params;
     params = params
       .append('page', filtro.pagina.toString())
@@ -32,13 +32,13 @@ export class ModalidadesService /*extends BaseResourceService<Modalidade>*/{
         };
         return resultado;
       });
-  }*/
+  }
 
-  /*listAll(): Promise<any> {
+  listAll(): Promise<any> {
     return this.http
       .get<any>(this.apiPath + '/list')
       .toPromise()
       .then((response) => response);
-  }*/
+  }
 
 }

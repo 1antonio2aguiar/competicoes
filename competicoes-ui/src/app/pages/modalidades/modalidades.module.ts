@@ -4,7 +4,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { ModalidadesRoutingModule, routedComponents } from './modalidades-routing.module';
-//import { FsIconComponent } from './tree-grid/tree-grid.component';
+import { FsIconComponent } from './tree-grid/tree-grid.component';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { ModalidadesRoutingModule, routedComponents } from './modalidades-routin
   ],
   declarations: [
     ...routedComponents,
-    //FsIconComponent,
+    FsIconComponent,
   ],
 })
 

@@ -18,6 +18,13 @@ const routes: Routes = [{
       path: 'iot-dashboard',
       component: DashboardComponent,
     },
+
+    /*{
+      path: 'modalidades',
+      loadChildren: () => import('./modalidades/modalidades.module')
+        .then(m => m.ModalidadesModule),
+    },*/
+
     {
       path: 'layout',
       loadChildren: () => import('./layout/layout.module')
@@ -59,11 +66,6 @@ const routes: Routes = [{
         .then(m => m.EditorsModule),
     },
     {
-      path: 'tables',
-      loadChildren: () => import('./tables/tables.module')
-        .then(m => m.TablesModule),
-    },
-    {
       path: 'miscellaneous',
       loadChildren: () => import('./miscellaneous/miscellaneous.module')
         .then(m => m.MiscellaneousModule),
@@ -84,5 +86,6 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+
 export class PagesRoutingModule {
 }

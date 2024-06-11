@@ -13,7 +13,7 @@ import { BaseResourceListComponent } from '../../../shared/components/base-resou
   templateUrl: './modalidade-pesquisa.component.html',
   styleUrls: ['./modalidade-pesquisa.component.scss'],
 })
-export class ModalidadePesquisaComponent /*extends BaseResourceListComponent<Modalidade>*/ {
+export class ModalidadePesquisaComponent extends BaseResourceListComponent<Modalidade> {
   filtro = new ModalidadesFiltro();
   resources = [];
   loading = true;
@@ -52,14 +52,14 @@ export class ModalidadePesquisaComponent /*extends BaseResourceListComponent<Mod
   source: LocalDataSource = new LocalDataSource();
 
   constructor(
-    //private modalidadesService: ModalidadesService,
-    //public confirmationService: ConfirmationService,
-    //public messageService: MessageService
+    private modalidadesService: ModalidadesService,
+    public confirmationService: ConfirmationService,
+    public messageService: MessageService
   ) {
-    //super(modalidadesService, confirmationService, messageService); // Passa a instância de ModalidadesService
+    super(modalidadesService, confirmationService, messageService); // Passa a instância de ModalidadesService
   }
 
-  /*pesquisar(pagina = 0) {
+  pesquisar(pagina = 0) {
     this.filtro.pagina = pagina;
     this.modalidadesService.pesquisar(this.filtro)
     .then(resultado => {
@@ -72,7 +72,7 @@ export class ModalidadePesquisaComponent /*extends BaseResourceListComponent<Mod
        erro = 'Erro';
        this.loading = false;
     });
-  }*/
+  }
 
   /*constructor(private service: ModalidadeData) {
     const data = this.service.getData();
