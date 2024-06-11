@@ -19,11 +19,11 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
 
-    /*{
+    {
       path: 'modalidades',
       loadChildren: () => import('./modalidades/modalidades.module')
         .then(m => m.ModalidadesModule),
-    },*/
+    },
 
     {
       path: 'layout',
