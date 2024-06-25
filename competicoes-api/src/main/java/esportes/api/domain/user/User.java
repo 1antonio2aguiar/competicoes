@@ -1,13 +1,10 @@
 package esportes.api.domain.user;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
-
-import javax.persistence.*;
 
 @Entity(name = "User")
 @Table(name = "vw_users")
-//@Table(name = "users")
 @Getter
 @Setter
 @AllArgsConstructor
